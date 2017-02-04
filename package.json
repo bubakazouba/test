@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bubakazouba/test/issues"
   },
-  "homepage": "https://github.com/bubakazouba/test"
+  "homepage": "https://github.com/bubakazouba/test",
+  "dependencies": {
+    "mongodb": "^2.2.22"
+  }
 }
