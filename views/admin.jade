@@ -1,9 +1,21 @@
-html(lang="en")
+doctype html
+html
   head
-    title #{title}
-    meta(charset='utf-8')
-    meta(name="viewport", content="width=device-width, initial-scale=1")
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
-    link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css")
+    title
   body
-    h1 #{test}
+    form(action='/admin/submit', method='post')
+      | Employee Name: 
+      br
+      input(type='text', name='firstname')
+      br
+      | 		Employee Number: 
+      br
+      input(type='text', name='number')
+      br
+      | 		Password
+      input(type='text', name='password')
+      br
+      | 		Position
+      input(type='text', name='position')
+      br
+      input(type='submit')

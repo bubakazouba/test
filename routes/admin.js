@@ -4,22 +4,30 @@ var express = require('express'),
 
 
 router.get('/admin', function(req, res) {
-    var employeeObject = {
-            employeeName: "hi",
-            password: "123",
-            number: "3",
-            position: "manager" };
-    var employee = new EmployeeSchema(employeeObject);
-
-    employee.save(function(err, employeeSave){
-        console.log("saved");
-    });
+ 
 
     res.render('admin.jade', {
-        title: "Cloud 11 - Recruitment App Admin Dashboard",
             test: "hi"
         }
     );
 });
+
+router.post('/admin/submit', function(req, res){
+    res.send('thank you!')
+
+    var employeeObject = {
+        employeeName: req.body.firstname,
+        password: req.body.password,
+        number: req.body.number,
+        position: req.body.position
+    }
+
+    var employee = new EmployeeSchema(employeeObject);
+
+    employee.save(function(err, employeeSave){
+        console.log("saved!");
+    })
+
+} )
 
 module.exports = router;
