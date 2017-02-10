@@ -1,0 +1,6 @@
+{
+    "uid": "chefoncall",
+    "append": "true",
+    "watch": true,
+    "script": "app.js"
+}
